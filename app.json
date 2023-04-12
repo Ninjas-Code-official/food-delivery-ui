@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "version": "1.0.2",
+    "name": "Enatega - Food Delivery UI Theme",
+    "description": "Enatega is a starter kit food ordering UI theme built in React Native using Expo for IOS and Android. It's made keeping good aesthetics in mind as well keeping the best coding practices in mind. Its fully customisable to easily help you in your next food delivery project. ",
+    "slug": "Enatega",
+    "privacy": "public",
+    "sdkVersion": "35.0.0",
+    "androidStatusBar": {
+      "backgroundColor": "#000"
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fooddelivery"
+    },
+    "android": {
+      "package": "com.fooddelivery"
+    }
+  }
+}
