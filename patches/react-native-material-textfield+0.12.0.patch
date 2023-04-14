@@ -1,0 +1,308 @@
+diff --git a/node_modules/react-native-material-textfield/src/components/affix/index.js b/node_modules/react-native-material-textfield/src/components/affix/index.js
+index d6c9d64..52de29d 100644
+--- a/node_modules/react-native-material-textfield/src/components/affix/index.js
++++ b/node_modules/react-native-material-textfield/src/components/affix/index.js
+@@ -1,6 +1,7 @@
+ import PropTypes from 'prop-types';
+ import React, { PureComponent } from 'react';
+-import { Animated } from 'react-native';
++import { Animated, Text} from 'react-native';
++import {TextPropTypes} from 'deprecated-react-native-prop-types';
+ 
+ import styles from './styles';
+ 
+@@ -12,25 +13,25 @@ export default class Affix extends PureComponent {
+     focused: false,
+   };
+ 
+-  static propTypes = {
+-    numberOfLines: PropTypes.number,
++  // static propTypes = {
++  //   numberOfLines: PropTypes.number,
+ 
+-    active: PropTypes.bool,
+-    focused: PropTypes.bool,
++  //   active: PropTypes.bool,
++  //   focused: PropTypes.bool,
+ 
+-    type: PropTypes.oneOf(['prefix', 'suffix']).isRequired,
++  //   type: PropTypes.oneOf(['prefix', 'suffix']).isRequired,
+ 
+-    fontSize: PropTypes.number.isRequired,
+-    baseColor: PropTypes.string.isRequired,
+-    animationDuration: PropTypes.number.isRequired,
++  //   fontSize: PropTypes.number.isRequired,
++  //   baseColor: PropTypes.string.isRequired,
++  //   animationDuration: PropTypes.number.isRequired,
+ 
+-    style: Animated.Text.propTypes.style,
++  //   style: TextPropTypes.style,
+ 
+-    children: PropTypes.oneOfType([
+-      PropTypes.arrayOf(PropTypes.node),
+-      PropTypes.node,
+-    ]),
+-  };
++  //   children: PropTypes.oneOfType([
++  //     PropTypes.arrayOf(PropTypes.node),
++  //     PropTypes.node,
++  //   ]),
++  // };
+ 
+   constructor(props) {
+     super(props);
+diff --git a/node_modules/react-native-material-textfield/src/components/counter/index.js b/node_modules/react-native-material-textfield/src/components/counter/index.js
+index ad6e313..e26bc75 100644
+--- a/node_modules/react-native-material-textfield/src/components/counter/index.js
++++ b/node_modules/react-native-material-textfield/src/components/counter/index.js
+@@ -1,21 +1,21 @@
+ import PropTypes from 'prop-types';
+ import React, { PureComponent } from 'react';
+-import { View, Text } from 'react-native';
+-
++import { View } from 'react-native';
++import {TextPropTypes} from 'deprecated-react-native-prop-types';
+ import styles from './styles';
+ 
+ export default class Counter extends PureComponent {
+-  static propTypes = {
+-    count: PropTypes.number.isRequired,
+-    limit: PropTypes.number,
++  // static propTypes = {
++  //   count: PropTypes.number.isRequired,
++  //   limit: PropTypes.number,
+ 
+-    fontSize: PropTypes.number,
++  //   fontSize: PropTypes.number,
+ 
+-    baseColor: PropTypes.string.isRequired,
+-    errorColor: PropTypes.string.isRequired,
++  //   baseColor: PropTypes.string.isRequired,
++  //   errorColor: PropTypes.string.isRequired,
+ 
+-    style: Text.propTypes.style,
+-  };
++  //   style: TextPropTypes.style,
++  // };
+ 
+   render() {
+     let { count, limit, baseColor, errorColor, fontSize, style } = this.props;
+diff --git a/node_modules/react-native-material-textfield/src/components/field/index.js b/node_modules/react-native-material-textfield/src/components/field/index.js
+index 52c1868..8d44172 100644
+--- a/node_modules/react-native-material-textfield/src/components/field/index.js
++++ b/node_modules/react-native-material-textfield/src/components/field/index.js
+@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
+ import React, { PureComponent } from 'react';
+ import {
+   View,
+-  Text,
+   TextInput,
+   Animated,
+   StyleSheet,
+@@ -10,6 +9,7 @@ import {
+   ViewPropTypes,
+   I18nManager,
+ } from 'react-native';
++import {TextPropTypes} from 'deprecated-react-native-prop-types';
+ 
+ import RN from 'react-native/package.json';
+ 
+@@ -51,49 +51,49 @@ export default class TextField extends PureComponent {
+     disabledLineWidth: 1,
+   };
+ 
+-  static propTypes = {
+-    ...TextInput.propTypes,
++  // static propTypes = {
++  //   ...TextInput.propTypes,
+ 
+-    animationDuration: PropTypes.number,
++  //   animationDuration: PropTypes.number,
+ 
+-    fontSize: PropTypes.number,
+-    titleFontSize: PropTypes.number,
+-    labelFontSize: PropTypes.number,
+-    labelHeight: PropTypes.number,
+-    labelPadding: PropTypes.number,
+-    inputContainerPadding: PropTypes.number,
++  //   fontSize: PropTypes.number,
++  //   titleFontSize: PropTypes.number,
++  //   labelFontSize: PropTypes.number,
++  //   labelHeight: PropTypes.number,
++  //   labelPadding: PropTypes.number,
++  //   inputContainerPadding: PropTypes.number,
+ 
+-    labelTextStyle: Text.propTypes.style,
+-    titleTextStyle: Text.propTypes.style,
+-    affixTextStyle: Text.propTypes.style,
++  //   labelTextStyle: TextPropTypes.style,
++  //   titleTextStyle: TextPropTypes.style,
++  //   affixTextStyle: TextPropTypes.style,
+ 
+-    tintColor: PropTypes.string,
+-    textColor: PropTypes.string,
+-    baseColor: PropTypes.string,
++  //   tintColor: PropTypes.string,
++  //   textColor: PropTypes.string,
++  //   baseColor: PropTypes.string,
+ 
+-    label: PropTypes.string.isRequired,
+-    title: PropTypes.string,
++  //   label: PropTypes.string.isRequired,
++  //   title: PropTypes.string,
+ 
+-    characterRestriction: PropTypes.number,
++  //   characterRestriction: PropTypes.number,
+ 
+-    error: PropTypes.string,
+-    errorColor: PropTypes.string,
++  //   error: PropTypes.string,
++  //   errorColor: PropTypes.string,
+ 
+-    lineWidth: PropTypes.number,
+-    activeLineWidth: PropTypes.number,
++  //   lineWidth: PropTypes.number,
++  //   activeLineWidth: PropTypes.number,
+ 
+-    disabled: PropTypes.bool,
+-    disabledLineType: Line.propTypes.type,
+-    disabledLineWidth: PropTypes.number,
++  //   disabled: PropTypes.bool,
++  //   disabledLineType: Line.propTypes.type,
++  //   disabledLineWidth: PropTypes.number,
+ 
+-    renderAccessory: PropTypes.func,
++  //   renderAccessory: PropTypes.func,
+ 
+-    prefix: PropTypes.string,
+-    suffix: PropTypes.string,
++  //   prefix: PropTypes.string,
++  //   suffix: PropTypes.string,
+ 
+-    containerStyle: (ViewPropTypes || View.propTypes).style,
+-    inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+-  };
++  //   containerStyle: (ViewPropTypes || View.propTypes).style,
++  //   inputContainerStyle: (ViewPropTypes || View.propTypes).style,
++  // };
+ 
+   constructor(props) {
+     super(props);
+diff --git a/node_modules/react-native-material-textfield/src/components/helper/index.js b/node_modules/react-native-material-textfield/src/components/helper/index.js
+index 60184ea..29c1341 100644
+--- a/node_modules/react-native-material-textfield/src/components/helper/index.js
++++ b/node_modules/react-native-material-textfield/src/components/helper/index.js
+@@ -1,6 +1,7 @@
+ import PropTypes from 'prop-types';
+ import React, { PureComponent } from 'react';
+-import { View, Animated } from 'react-native';
++import { View, Animated,Text } from 'react-native';
++import {TextPropTypes} from 'deprecated-react-native-prop-types';
+ 
+ import styles from './styles';
+ 
+@@ -9,13 +10,13 @@ export default class Helper extends PureComponent {
+     numberOfLines: 1,
+   };
+ 
+-  static propTypes = {
+-    style: Animated.Text.propTypes.style,
+-    children: PropTypes.oneOfType([
+-      PropTypes.arrayOf(PropTypes.node),
+-      PropTypes.node,
+-    ]),
+-  };
++  // static propTypes = {
++  //   style: TextPropTypes.style,
++  //   children: PropTypes.oneOfType([
++  //     PropTypes.arrayOf(PropTypes.node),
++  //     PropTypes.node,
++  //   ]),
++  // };
+ 
+   render() {
+     let { children, style, ...props } = this.props;
+diff --git a/node_modules/react-native-material-textfield/src/components/label/index.js b/node_modules/react-native-material-textfield/src/components/label/index.js
+index ac3ed53..cc6d677 100644
+--- a/node_modules/react-native-material-textfield/src/components/label/index.js
++++ b/node_modules/react-native-material-textfield/src/components/label/index.js
+@@ -1,6 +1,7 @@
+ import PropTypes from 'prop-types';
+ import React, { PureComponent } from 'react';
+-import { Animated } from 'react-native';
++import { Animated, Text } from 'react-native';
++import {TextPropTypes} from 'deprecated-react-native-prop-types';
+ 
+ export default class Label extends PureComponent {
+   static defaultProps = {
+@@ -12,30 +13,30 @@ export default class Label extends PureComponent {
+     restricted: false,
+   };
+ 
+-  static propTypes = {
+-    active: PropTypes.bool,
+-    focused: PropTypes.bool,
+-    errored: PropTypes.bool,
+-    restricted: PropTypes.bool,
++  // static propTypes = {
++  //   active: PropTypes.bool,
++  //   focused: PropTypes.bool,
++  //   errored: PropTypes.bool,
++  //   restricted: PropTypes.bool,
+ 
+-    baseSize: PropTypes.number.isRequired,
+-    fontSize: PropTypes.number.isRequired,
+-    activeFontSize: PropTypes.number.isRequired,
+-    basePadding: PropTypes.number.isRequired,
++  //   baseSize: PropTypes.number.isRequired,
++  //   fontSize: PropTypes.number.isRequired,
++  //   activeFontSize: PropTypes.number.isRequired,
++  //   basePadding: PropTypes.number.isRequired,
+ 
+-    tintColor: PropTypes.string.isRequired,
+-    baseColor: PropTypes.string.isRequired,
+-    errorColor: PropTypes.string.isRequired,
++  //   tintColor: PropTypes.string.isRequired,
++  //   baseColor: PropTypes.string.isRequired,
++  //   errorColor: PropTypes.string.isRequired,
+ 
+-    animationDuration: PropTypes.number.isRequired,
++  //   animationDuration: PropTypes.number.isRequired,
+ 
+-    style: Animated.Text.propTypes.style,
++  //   style: TextPropTypes.style,
+ 
+-    children: PropTypes.oneOfType([
+-      PropTypes.arrayOf(PropTypes.node),
+-      PropTypes.node,
+-    ]),
+-  };
++  //   children: PropTypes.oneOfType([
++  //     PropTypes.arrayOf(PropTypes.node),
++  //     PropTypes.node,
++  //   ]),
++  // };
+ 
+   constructor(props) {
+     super(props);
+diff --git a/node_modules/react-native-material-textfield/src/components/line/index.js b/node_modules/react-native-material-textfield/src/components/line/index.js
+index 4f1074a..b0d8010 100644
+--- a/node_modules/react-native-material-textfield/src/components/line/index.js
++++ b/node_modules/react-native-material-textfield/src/components/line/index.js
+@@ -5,11 +5,11 @@ import { View } from 'react-native';
+ import styles from './styles';
+ 
+ export default class Line extends PureComponent {
+-  static propTypes = {
+-    type: PropTypes.oneOf(['solid', 'dotted', 'dashed', 'none']).isRequired,
+-    width: PropTypes.number.isRequired,
+-    color: PropTypes.string.isRequired,
+-  };
++  // static propTypes = {
++  //   type: PropTypes.oneOf(['solid', 'dotted', 'dashed', 'none']).isRequired,
++  //   width: PropTypes.number.isRequired,
++  //   color: PropTypes.string.isRequired,
++  // };
+ 
+   render() {
+     let {

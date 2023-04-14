@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import Timeline from 'react-native-timeline-listview';
+import Timeline from 'react-native-timeline-flatlist';
 import Header from '../../components/Header/Header';
 import styles from './styles';
 import { colors } from '../../utils/colors';

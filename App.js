@@ -1,9 +1,12 @@
 import React from 'react';
 import * as Font from 'expo-font';
 import { View, ActivityIndicator } from 'react-native';
+import { LogBox } from 'react-native';
 import AppContainer from './src/routes';
 import { colors } from './src/utils/colors';
-
+import {Text} from 'react-native'
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
 console.disableYellowBox = true;
 export default class App extends React.Component {
     constructor(props) {
@@ -28,7 +31,7 @@ export default class App extends React.Component {
             );
         } return (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <ActivityIndicator size="large" color={colors.greenColor} />
+                <ActivityIndicator size="large" color={colors.greenColor} />                
           </View>
         );
     }
