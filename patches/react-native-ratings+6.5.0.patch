@@ -1,0 +1,42 @@
+diff --git a/node_modules/react-native-ratings/src/SwipeRating.js b/node_modules/react-native-ratings/src/SwipeRating.js
+index d32faee..38a0229 100644
+--- a/node_modules/react-native-ratings/src/SwipeRating.js
++++ b/node_modules/react-native-ratings/src/SwipeRating.js
+@@ -318,20 +318,20 @@ const fractionsType = (props, propName, componentName) => {
+   }
+ };
+ 
+-SwipeRating.propTypes = {
+-  type: PropTypes.string,
+-  ratingImage: Image.propTypes.source,
+-  ratingColor: PropTypes.string,
+-  ratingBackgroundColor: PropTypes.string,
+-  ratingCount: PropTypes.number,
+-  ratingTextColor: PropTypes.string,
+-  imageSize: PropTypes.number,
+-  onStartRating: PropTypes.func,
+-  onFinishRating: PropTypes.func,
+-  showRating: PropTypes.bool,
+-  style: ViewPropTypes.style,
+-  readonly: PropTypes.bool,
+-  startingValue: PropTypes.number,
+-  fractions: fractionsType,
+-  minValue: PropTypes.number
+-};
++// SwipeRating.propTypes = {
++//   type: PropTypes.string,
++//   ratingImage: Image.propTypes.source,
++//   ratingColor: PropTypes.string,
++//   ratingBackgroundColor: PropTypes.string,
++//   ratingCount: PropTypes.number,
++//   ratingTextColor: PropTypes.string,
++//   imageSize: PropTypes.number,
++//   onStartRating: PropTypes.func,
++//   onFinishRating: PropTypes.func,
++//   showRating: PropTypes.bool,
++//   style: ViewPropTypes.style,
++//   readonly: PropTypes.bool,
++//   startingValue: PropTypes.number,
++//   fractions: fractionsType,
++//   minValue: PropTypes.number
++// };

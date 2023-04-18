@@ -1,0 +1,43 @@
+diff --git a/node_modules/react-native-material-ripple/index.js b/node_modules/react-native-material-ripple/index.js
+index e43216d..4cb2b98 100644
+--- a/node_modules/react-native-material-ripple/index.js
++++ b/node_modules/react-native-material-ripple/index.js
+@@ -20,22 +20,22 @@ export default class Ripple extends PureComponent {
+     onRippleAnimation: (animation, callback) => animation.start(callback),
+   };
+ 
+-  static propTypes = {
+-    ...Animated.View.propTypes,
+-    ...TouchableWithoutFeedback.propTypes,
+-
+-    rippleColor: PropTypes.string,
+-    rippleOpacity: PropTypes.number,
+-    rippleDuration: PropTypes.number,
+-    rippleSize: PropTypes.number,
+-    rippleContainerBorderRadius: PropTypes.number,
+-    rippleCentered: PropTypes.bool,
+-    rippleSequential: PropTypes.bool,
+-    rippleFades: PropTypes.bool,
+-    disabled: PropTypes.bool,
+-
+-    onRippleAnimation: PropTypes.func,
+-  };
++  // static propTypes = {
++  //   ...Animated.View.propTypes,
++  //   ...TouchableWithoutFeedback.propTypes,
++
++  //   rippleColor: PropTypes.string,
++  //   rippleOpacity: PropTypes.number,
++  //   rippleDuration: PropTypes.number,
++  //   rippleSize: PropTypes.number,
++  //   rippleContainerBorderRadius: PropTypes.number,
++  //   rippleCentered: PropTypes.bool,
++  //   rippleSequential: PropTypes.bool,
++  //   rippleFades: PropTypes.bool,
++  //   disabled: PropTypes.bool,
++
++  //   onRippleAnimation: PropTypes.func,
++  // };
+ 
+   constructor(props) {
+     super(props);

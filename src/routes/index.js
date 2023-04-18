@@ -4,7 +4,10 @@ import {
     createAppContainer,
     createDrawerNavigator,
 } from 'react-navigation';
-
+// import createSwitchNavigator from "@react-navigation/compat"
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createDrawerNavigator } from '@react-navigation/drawer';
+// import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../screens/Login/Login';
 import Register from '../screens/Register/Register';
 import LoginOrReg from '../screens/LoginOrReg/LoginOrReg';
@@ -76,3 +79,29 @@ const AppNavigator = createSwitchNavigator(
 const AppContainer = createAppContainer(AppNavigator)
 
 export default AppContainer
+
+// function Drawer() {
+//     const Tabs = createDrawerNavigator();
+//     return (
+//         <Tabs.Navigator initialRouteName='Menu'>
+//         <Tabs.Screen name='MenuItems' component={MenuItems} />
+//         <Tabs.Screen name='Cart' component={Cart} />
+//     </Tabs.Navigator >
+//     )
+// }
+// function AppContainer() {
+    
+
+//     const MainStack = createStackNavigator()
+//     //const { isLoggedIn } = useContext(UserContext)
+//     return (
+        
+//         <NavigationContainer>
+//             <MainStack.Navigator initialRouteName='Drawer' headerMode='screen' >
+//                 <MainStack.Screen name='Drawer' component={Drawer} options={{ headerShown: false }} />
+//             </MainStack.Navigator>
+//         </NavigationContainer>
+//     )
+// }
+
+// export default AppContainer;

@@ -8,13 +8,13 @@ import styles from './styles';
 const DEFAULT_SIZE_MULTIPLIER = 0.7;
 
 export default class RadioButton extends Component {
-  static propTypes = {
-      size: PropTypes.number,
-      innerColor: PropTypes.string,
-      outerColor: PropTypes.string,
-      isSelected: PropTypes.bool,
-      onPress: PropTypes.func,
-  }
+//   static propTypes = {
+//       size: PropTypes.number,
+//       innerColor: PropTypes.string,
+//       outerColor: PropTypes.string,
+//       isSelected: PropTypes.bool,
+//       onPress: PropTypes.func,
+//   }
 
   static defaultProps = {
       size: 16,
