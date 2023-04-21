@@ -60,7 +60,7 @@ Food Ordering App Theme Enatega will come with expo project.
 
 ## Documentation
 
-Find the link for the complete documentation of the OLO UI app [here](https://sharan-gohar.gitbook.io/workspace/).
+Find the link for the complete documentation of the Food Delivery UI app [here](https://sharan-gohar.gitbook.io/workspace/).
 
 ## Get the Latest News
 
